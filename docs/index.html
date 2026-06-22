@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Buenas Viagens!</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Buenas Viagens!</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Passeios</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Avaliações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>EXPLORE O MUNDO!</h1>
+        </div>
+
+        <div class="busca">
+            <input type="text" placeholder="Para onde vamos?">
+            <input type="date">
+            <input type="date">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+    </main>
+
+    <section class="destinos">
+        <h2>Para onde você quer viajar?</h2>
+        <p class="subtitulo">Buenas Viagens!</p>
+
+        <div class="cards-grid">
+
+            <article class="card">
+                <img src="./img/horizonte_De_Berlim.webp" alt="Berlim">
+                <div class="card-info">
+                    <h3>Berlim <span>Alemanha</span></h3>
+                    <p>A cidade se destaca pela sua arquitetura mista, onde prédios históricos e modernos coexistem, e por ser um caldeirão de mais de 150 nacionalidades.</p>
+                    <div class="precos">
+                        <div>
+                            <div class="preco-novo">R$ 3.900,00</div>
+                            <div class="preco-velho">R$ 4.400,00</div>
+                        </div>
+                        <button class="btn-saiba" onclick="saibaMais('Berlim')">Saiba mais</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="./img/porto alegre.webp" alt="Porto alegre">
+                <div class="card-info">
+                    <h3>Porto alegre <span> Brasil </span></h3>
+                    <p>A cidade combina modernidade com história, oferecendo uma infraestrutura robusta para negócios, cultura e turismo, além de uma vida noturna vibrante e uma gastronomia variada.</p>
+                    <div class="precos">
+                        <div>
+                            <div class="preco-novo">R$ 3.700,00</div>
+                            <div class="preco-velho">R$ 4.300,00</div>
+                        </div>
+                        <button class="btn-saiba" onclick="saibaMais('Porto alegre')">Saiba mais</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="./img/Nova_York.webp" alt="Nova_York">
+                <div class="card-info">
+                    <h3>Nova York <span> Estados Unidos </span></h3>
+                    <p>Nova York, conhecida como a "cidade que nunca dorme",é um destino cosmopolita e vibrante que combina arranha-céus icônicos com vastas áreas verdes e uma diversidade cultural imensa.</p>
+                    <div class="precos">
+                        <div>
+                            <div class="preco-novo">R$ 3.500,00</div>
+                            <div class="preco-velho">R$ 4.200,00</div>
+                        </div>
+                        <button class="btn-saiba" onclick="saibaMais('Nova York')">Saiba mais</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="./img/Kyoto.webp" alt="Kyoto">
+                <div class="card-info">
+                    <h3> Kyoto <span> Japão</span></h3>
+                    <p>Kyoto é a antiga capital do Japão, reconhecida como o coração cultural do país por sua profunda ligação com a tradição, espiritualidade e história.</p>
+                    <div class="precos">
+                        <div>
+                            <div class="preco-novo">R$ 4.200,00</div>
+                            <div class="preco-velho">R$ 4.900,00</div>
+                        </div>
+                        <button class="btn-saiba" onclick="saibaMais('Kyoto')">Saiba mais</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="./img/busan.webp" alt="Busan">
+                <div class="card-info">
+                    <h3> Busan <span> Coreia Do Sul </span></h3>
+                    <p>Busan é a segunda maior cidade da Coreia do Sul, localizada no extremo sudeste, conhecida por seu ritmo mais relaxado, forte identidade marítima e paisagens que misturam montanhas e oceano. </p>
+                    <div class="precos">
+                        <div>
+                            <div class="preco-novo">R$ 3.900,00</div>
+                            <div class="preco-velho">R$ 4.300,00</div>
+                        </div>
+                        <button class="btn-saiba" onclick="saibaMais('Busan')">Saiba mais</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="./img/brittany.webp" alt="brittany">
+                <div class="card-info">
+                    <h3> Brittany <span> França </span></h3>
+                    <p>A Bretanha (Bretagne) é uma região charmosa no noroeste da França, banhada pelo Oceano Atlântico e pelo Canal da Mancha, conhecida por sua rica herança celta, paisagens dramáticas e cidades medievais bem preservadas.</p>
+                    <div class="precos">
+                        <div>
+                            <div class="preco-novo">R$ 4.500,00</div>
+                            <div class="preco-velho">R$ 5.300,00</div>
+                        </div>
+                        <button class="btn-saiba" onclick="saibaMais('Brittany')">Saiba mais</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="avaliacoes">
+        <h2>Avaliações dos Clientes</h2>
+        <div class="avaliacao-box">
+            <p id="texto-avaliacao">"Facilis nemo molestias eum eligendi assumenda consequuntur..."</p>
+            <img class="avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patrícia" id="foto-avaliacao">
+            <div class="nome" id="nome-avaliacao">Patrícia</div>
+            <div class="profissao" id="prof-avaliacao">Jornalista</div>
+        </div>
+        <div class="nav-avaliacoes">
+            <button onclick="mudarAvaliacao(-1)">&#8249;</button>
+            <button onclick="mudarAvaliacao(1)">&#8250;</button>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div class="logo-footer">Buenas Viagens!</div>
+            <p>Buenas Viagens & Turismo S.A.<br>Avenida da Boa Vista, 1234<br>Porto, Portugal</p>
+        </div>
+
+        <div>
+
+            <h4>Nossos Parceiros</h4>
+            <ul>
+                <li>consectetur adipisicing</li>
+                <li>Pariatur autem harum</li>
+                <li>distinctio laudantium ducimus</li>
+                <li>temporibus vel magnam</li>
+                <li>commodi sed quaerat</li>
+            </ul>
+
+        </div>
+
+        <div>
+            <h4>Assine a nossa newsletter</h4>
+            <input type="email" placeholder="Informe seu e-mail">
+            <button>Enviar</button>
+            <h4>Siga nossas redes sociais</h4>
+            <div class="redes-sociais">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        Buenas Viagens & Turismo S.A. © Todos os direitos reservados 2024
+    </div>
+
+    <script>
+        function buscar() {
+    const destino = document.querySelector('.busca input').value;
+    alert(destino == '' ? 'Preencha o destino!' : 'Buscando viagens para: ' + destino);
+}
+
+function saibaMais(cidade) {
+    alert('Saiba mais sobre ' + cidade + '! (página em construção)');
+}
+
+const avaliacoes = [
+    { texto: '"A melhor viagem que fiz, o meu primeiro contato com Kyoto foi incrivel."', foto: 'https://randomuser.me/api/portraits/women/44.jpg', nome: 'Gabriela', profissao: 'Engenheira de dados' },
+    { texto: '"Viagem que fiz para Busan foi simplesmente maravilhosa! A experiencia foi excelente do começo ao fim."', foto: 'https://randomuser.me/api/portraits/men/32.jpg', nome: 'Caio', profissao: 'Cientista de dados' },
+    { texto: '"Melhor agência de viagens que já usei, e voltarei de novo a nova york mais uma vez usando essa agência de viagens"', foto: 'https://randomuser.me/api/portraits/women/68.jpg', nome: 'Carol', profissao: 'Engenheira de software' }
+];
+
+let atual = 0;
+
+function mudarAvaliacao(direcao) {
+    atual = (atual + direcao + avaliacoes.length) % avaliacoes.length;
+
+    document.getElementById('texto-avaliacao').innerText = avaliacoes[atual].texto;
+    document.getElementById('foto-avaliacao').src        = avaliacoes[atual].foto;
+    document.getElementById('nome-avaliacao').innerText  = avaliacoes[atual].nome;
+    document.getElementById('prof-avaliacao').innerText  = avaliacoes[atual].profissao;
+}
+
+    </script>
+</body>
+</html>
